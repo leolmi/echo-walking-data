@@ -1,0 +1,12 @@
+<div layout="row" class="buttons-bar" echo-sticky>
+  <h3 class="light-title">{{caption}}</h3>
+  <span flex></span>
+  <md-button ng-repeat-start="b in buttons"
+             class="md-icon-button" ng-class="b.style || {'checked':b.checked && b.checked()}"
+             ng-click="b.action($event)" aria-label="{{b.tooltip}}"
+             ng-disabled="b.disabled && b.disabled()" ng-hide="b.divider || (b.hidden && b.hidden())">
+    <md-tooltip>{{getValue(b, 'tooltip')}}</md-tooltip>
+    <md-icon class="material-icons">{{getValue(b, 'icon')}}</md-icon>
+  </md-button>
+  <md-divider ng-show="b.divider" ng-repeat-end></md-divider>
+</div>

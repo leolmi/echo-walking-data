@@ -1,17 +1,32 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name echoWalkingDataApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the echoWalkingDataApp
- */
 angular.module('echoWalkingDataApp')
-  .controller('MainCtrl', ['$scope', '$rootScope', 'util', 'Scenario','echoService',
-    function ($scope, $rootScope, util, Scenario, echoService) {
+  .controller('MainCtrl', ['$scope', '$rootScope','echoService', 'util', 'Scenario', 'Document',
+    function ($scope, $rootScope, echoService, util, Scenario, Document) {
       $scope.loading = false;
       $rootScope.currentScenario = new Scenario();
+      $rootScope.currentDocument = new Document();
+
+
+
+      function openSettings(e) {
+        alert('apre le opzioni');
+      }
+
+      $scope.buttons = [{
+        icon:'view_agenda',
+        tooltip:'Add Query'
+      }, {
+        divider: true
+      },{
+        icon:'save',
+        tooltip:'Save Document'
+      },{
+        icon:'settings',
+        tooltip:'Settings',
+        action: openSettings
+      }];
+
 
       function reload(cb) {
         if ($scope.loading) return;
