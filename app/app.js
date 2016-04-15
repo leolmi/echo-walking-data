@@ -17,7 +17,6 @@ angular
     'ngRoute',
     'ngSanitize',
     'ui.router',
-    'ngTouch',
     'ngMaterial',
     'ngFileSaver'
   ])

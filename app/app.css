@@ -44,5 +44,60 @@
 }
 
 body {
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  background-color: #111;
+  color: whitesmoke;
+  margin: 0;
   padding: 0;
+  overflow: hidden;
+}
+
+
+.echo-app-container {
+  max-height: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+pre {
+  font-size: 12px;
+  background-color: rgba(1, 1, 1, .1);
+  padding: 20px;
+  /*white-space: normal;*/
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: auto;
+}
+pre.error {
+  color: tomato;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.warning {
+  padding: 20px;
+  text-align: center;
+  background: tomato;
+  color: #111;
+  cursor: pointer;
+}
+
+.as-button {
+  cursor: pointer;
+  outline: none;
+}
+.as-button:hover {
+  color: yellowgreen;
+}
+
+.text-center {
+  text-align: center;
+}
+.grey-text {
+  color: #888 !Important;
+}
+.text-highlight {
+  color: orange;
 }

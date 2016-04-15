@@ -1,1 +1,16 @@
-<h1>Echo Walking-Data</h1>
+<div class="main-header text-center">
+  <div layout="row" layout-align="center center" class="app-title">
+    <h1 class="app-name">Echo Walking-Data</h1>
+  </div>
+  <p class="md-subhead version">echo-service v.{{currentScenario.version.num}}</p>
+  <div class="scenario">
+    <strong>{{currentScenario.title}}</strong>
+    <md-icon class="material-icons scenario-auth" ng-show="currentScenario && currentScenario.auth">
+      <md-tooltip>Security active</md-tooltip>
+      verified_user
+    </md-icon>
+    <strong ng-show="currentScenario && currentScenario.auth">{{getUserName()}}</strong>
+    <span class="grey-text" ng-hide="currentScenario.name || loading">undefined scenario</span>
+    <span class="grey-text" ng-show="loading">loading...</span>
+  </div>
+</div>
